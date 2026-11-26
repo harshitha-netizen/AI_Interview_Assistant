@@ -10,6 +10,6 @@ st.write("Department of AIDS")
 try:
   client=Groq(api_key=st.secrets['GROQ_API_KEY'])
   st.write("API connection successful")
-except (keyError, FileNotFoundError):
+except (KeyError, FileNotFoundError):
   st.error('GROQ_API_KEY is missing.')
   st.stop()         
